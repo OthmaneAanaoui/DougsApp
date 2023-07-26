@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: DougsApp
+  version: 1.0.0
+  description: DougsApp utilisant Swagger
+servers:
+  - url: http://localhost:5000
+paths:
+  /api/operations:
+    post:
+      summary: Ajouter une nouvelle opération
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                wording:
+                  type: string
+                amount:
+                  type: number
+              required:
+                - date
+                - wording
+                - amount
+      responses:
+        '201':
+          description: Opération ajoutée avec succès
+  /api/operations:
+    get:
+      summary: Obtenir toutes les opérations
+      responses:
+        '200':
+          description: Réponse réussie
+  /api/balances:
+    post:
+      summary: Ajouter un nouveau point de contrôle (balance)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                balance:
+                  type: number
+              required:
+                - date
+                - balance
+      responses:
+        '201':
+          description: Point de contrôle ajouté avec succès
+  /api/balances:
+    get:
+      summary: Obtenir tous les points de contrôle (balances)
+      responses:
+        '200':
+          description: Réponse réussie
+  /api/movements/validation:
+    post:
+      summary: Valider les mouvements
+      responses:
+        '200':
+          description: Validation complétée avec succès

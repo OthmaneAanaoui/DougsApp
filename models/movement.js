@@ -19,6 +19,14 @@ const Movement = sequelize.define("Movement", {
     type: DataTypes.FLOAT,
     allowNull: false,
   },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
 });
 
 module.exports = Movement;

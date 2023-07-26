@@ -1,4 +1,5 @@
 const Movement = require("./movement");
+const Balance = require('./balance');
 const User = require("./user");
 const sequelize = require("../config/database");
 
@@ -22,5 +23,6 @@ const sequelize = require("../config/database");
 
 module.exports = {
   Movement,
+  Balance,
   User,
 };

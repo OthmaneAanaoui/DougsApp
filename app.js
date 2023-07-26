@@ -13,6 +13,11 @@ app.use(express.json());
 // Routes
 app.use("/api", routes);
 
+const createSwaggerDocs = require('./swagger');
+createSwaggerDocs(app);
+
+
+
 // Gestionnaire d'erreurs (middleware global pour les erreurs asynchrones)
 app.use((err, req, res, next) => {
   console.error(err);
@@ -38,3 +43,5 @@ app.listen(PORT, async () => {
     );
   }
 });
+
+module.exports = app;
