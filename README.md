@@ -24,7 +24,7 @@ Pour le développement de l'application, nous avons utilisé les technologies su
 ## Structure du Projet
 
 ```
-mon-app-express/
+DougsApp/
   |- app.js
   |- config/
       |- database.js
